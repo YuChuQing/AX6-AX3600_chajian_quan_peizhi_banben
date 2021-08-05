@@ -26,6 +26,8 @@ sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=65535
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 #git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+#全能推送
+git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
