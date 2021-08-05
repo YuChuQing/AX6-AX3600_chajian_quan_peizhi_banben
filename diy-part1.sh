@@ -16,3 +16,6 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+#默认开放80端口
+sed -i 'a/iptables -I INPUT -p tcp  -m multiport --dport 80 -j ACCEPT' /etc/firewall.user
