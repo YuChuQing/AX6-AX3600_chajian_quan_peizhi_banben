@@ -19,3 +19,5 @@
 
 #默认开放80端口
 sed -i '/# special user chains, e.g. input_wan_rule or postrouting_lan_rule./a iptables -I INPUT -p tcp  -m multiport --dport 80 -j ACCEPT' package/network/config/firewall/files/firewall.user
+#修改最大连接数为65535
+sed -i '/# Defaults are configured in /etc/sysctl.d/* and can be customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
